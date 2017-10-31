@@ -81,8 +81,6 @@ public class GradientDescentOptimizerFactory extends OptimizerFactory {
 		this.gradientClippingThreshold = gradientClippingThreshold;
 	}
 
-	
-	
 	@Override
 	public GradientDescentOptimizer create(int numWeights) {
 		return new GradientDescentOptimizer(paramSelectCriteria, adaptiveStrategy, learningRate, learningRateDecay, adadeltaPhi, adadeltaEps, adadeltaGradDecay, rmsPropDecay, rmsPropEps, adamBeta1, adamBeta2, adamEps, numWeights, gradientClipping, gradientClippingThreshold);

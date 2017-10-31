@@ -38,7 +38,7 @@ public abstract class OptimizerFactory implements Serializable {
 	}
 	
 	private static final long serialVersionUID = 70815268952763513L;
-	public static final double DEFAULT_LEARNING_RATE = 0.01;
+	public static final double DEFAULT_LEARNING_RATE = 1e-3;
 	public static final double DEFAULT_LEARNING_RATE_DECAY = 0.9;
 	public static final double DEFAULT_ADADELTA_PHI = 0.95;
 	public static final double DEFAULT_ADADELTA_EPS = 1e-7;
@@ -341,7 +341,7 @@ public abstract class OptimizerFactory implements Serializable {
 	 * @param learningRate
 	 * @param rmsPropDecay
 	 * @param rmsPropEps
-	 * @returnDEFAULT_LEARNING_RATE
+	 * @return
 	 */
 	public static GradientDescentOptimizerFactory getGradientDescentFactoryUsingRMSProp(double learningRate, double rmsPropDecay, double rmsPropEps){
 		return new GradientDescentOptimizerFactory(BestParamCriteria.BEST_OBJECTIVE, AdaptiveStrategy.RMSPROP, learningRate, DEFAULT_LEARNING_RATE_DECAY, 0.0, 0.0, 0.0, rmsPropDecay, rmsPropEps, 0.0, 0.0, 0.0, false, 0);
