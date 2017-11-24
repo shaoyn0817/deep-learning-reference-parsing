@@ -1,3 +1,4 @@
 # reference-parsing
-CNNs-BiLSTM-semiCRFs structure reference parsing
+BiLSTM-CRF structure reference parsing
+
 datasets: Cora Citeseer 
